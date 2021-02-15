@@ -1,0 +1,133 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
+
+  min-height: 100vh; /*tamanho minimo*/
+  text-align: center; /*alinhamento de texto*/
+
+  display: flex;
+
+}
+
+#container {
+  margin: auto;
+
+  width: min(90%, 112rem);
+} 
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+} 
+
+.location {
+  font-size: 1.8rem; 
+  line-height: 1.5;
+
+  animation-delay: 100ms;
+} 
+
+main h1 {
+  animation-delay: 150ms; 
+  font-size: clamp(4rem, 8vw, 8.4rem); /* tamanho minimo, padrao de largura (vw) e maximo de fonte / clamp >> MAIS RESPONSIVO*/ 
+}
+
+.visit p { 
+    font-size: 1.8rem;
+
+  animation-delay: 200ms; 
+}
+
+
+.visit a {
+  width: 8rem; /* largura */
+  height: 8rem; /* altura */
+  background: #ffd666;
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex; /* Deixa os itens (caixas) um do lado do outro */
+  align-items: center; /* Alinha os itens com o eixo x */
+  justify-content: center;
+
+  margin: auto; 
+  transition: background 0.2s; 
+
+  animation-delay: 250ms;
+} 
+
+.visit a:hover { /* quando estiver com o mouse em cima */
+
+    background: #96feff
+}
+
+
+/* DESKTOP VERSION */
+
+/* para usar @media precisa ter <meta name=viewport.../> no index.html 
+no caso, ele vai usar esse @media quando a tela usuario for maior que 760px
+*/
+@media (min-width:760px) { 
+
+  #container{
+    
+    padding: 5rem 2rem;
+
+    /* shorthand background = image repeat position | size */
+    background: url(../images/bg.svg) no-repeat 80% / clamp(30rem, 54vw, 56rem);
+
+  }
+
+  header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* Colocando espaco entre os itens */
+  
+  } 
+
+  .location, h1, .visit p {
+    height: initial; /* initial = reseta para os valores iniciais */ 
+    text-align: initial;
+}
+
+.location{
+  text-align: right;
+
+} 
+
+  main h1 { /* Especificando main h1 > h1 (podia ter colocado soh h1, porem mais 0fraco) */ 
+
+    /* font-size: 8vw;  vw = Tamanho em relacao a largura da tela do usuario (viewport)  */ 
+
+    font-weight: bold; /* wight = peso, bold = negrito*/
+    width: min(30rem,80%); /* tamanho da fonte  */
+    line-height: 0.88;/* espacamento (altura) entre as linhas */ 
+
+    margin: clamp(10%, 9vh, 12%) 0 4rem; /* margem da caixa = topo, lados, baixo */
+
+  } 
+
+  .visit {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+
+  }
+
+  .visit p {
+    line-height: 1.2; 
+    width: clamp(20rem, 20vw, 30rem);
+
+  }
+
+  .visit a{
+    margin: initial;
+  }
+
+
+}

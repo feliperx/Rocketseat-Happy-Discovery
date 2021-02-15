@@ -1,0 +1,53 @@
+/* animacoes */
+
+/*Para a page-landing*/
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(1.6rem); /* comeca no eixo Y de baixo*/
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0); /* deslocando p a posicao inicial no eixo Y*/
+  }
+}
+
+/* Para a page-orphanages*/
+@keyframes right {
+  from {
+    transform: translateX(-100%); /* desaparece no eixo X*/
+  }
+  to {
+    transform: translateX(0); /* aparece no eixo X da esquerda p direita*/
+  }
+} 
+
+/* */ 
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*classes de animacoes, lembrar de colocar a classe na tag do arquivo.html*/
+.animate-up {
+  animation-name: up; /* informo qual o nome da animacao*/
+  animation-duration: 0.3s; /*o tempo de animacao/deslocamento */
+  animation-fill-mode: backwards;
+}
+
+.animate-right {
+  animation-name: right;
+  animation-duration: 0.3s;
+} 
+
+.animate-appear{
+    animation-name: appear; 
+    animation-duration: 0.3s; 
+    animation-fill-mode: backwards; /* vai continuar opacity = 1*/
+
+}

@@ -1,0 +1,41 @@
+/* O que eh uma regra css ?
+-cascata 
+-importancia
+
+*/ 
+
+*{
+    margin: 0; /* margem 0*/
+    padding: 0; /*preenchimento 0*/ 
+    box-sizing: border-box; /* para manter as bordas com o tamanho sugerido e nao somar com o tamanho da caixa */
+}
+
+
+#body { /* seletor fazendo referencia a um id (inexistente) */
+
+    color: black; /* propriedade: valor*/
+
+} 
+
+body {
+    height: 100vh; 
+    color: white; 
+    background: #EBF2F5;
+}
+
+:root{
+    font-size: 62.5%; /*padrao 16px para deixar como 10px (1rem) aplicamos a porcentagem 62.5% */
+}
+
+body, input, button, textarea{
+
+   /* 
+    font-weight: 400;
+    line-height: 1;
+    font-size: 18px; 
+    font-family: 'Nunito', sans-serif; 
+    */
+
+    font: 400 2.0rem/1 'Nunito', sans-serif; /* agrupando os valores anteriores em uma soh propriedade*/
+}
+
